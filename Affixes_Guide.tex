@@ -1,26 +1,37 @@
-\documentclass[12pt,a4paper,titlepage,dvipsnames]{book}
+\documentclass[12pt,a4paper,titlepage, dvipsnames]{book}
 \usepackage{fullpage}
 \usepackage{fontspec}
+\usepackage[unicode,xetex]{hyperref}
+\hypersetup{colorlinks=true, linkcolor=cyan, urlcolor=blue}
+
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont{Gentium Plus}
 \begin{document}
 \begin{titlepage}
 	\centering
-	\vspace{1cm}
-	{\LARGE Columbidae University \par}
-	\vspace{1cm}
-	{\Large Final year project\par}
-	\vspace{1.5cm}
-	{\huge\bfseries Pigeons love doves\par}
+	\vspace*{3.5cm}
+	\vspace*{1.5cm}
+
+	{\huge\bfseries The Complete Guide to Affixes in Na'vi\par}
 	\vspace{2cm}
-	{\Large\itshape John Birdwatch\par}
+	{\Large\itshape By: Txawey sì Tirea Aean\par}
 	\vfill
-	supervised by\par
-	Dr.~Mark \textsc{Brown}
+	\href{https://forum.learnnavi.org/prefixes-infixes-and-suffixes/easy-guide-to-navi-prefixes-infixes-and-suffixes-ii/}{Original Post} by\par
+	Tirea Aean 
 
+	\vspace{2cm}
+\scriptsize Current Version: 0.1\par
+\scriptsize Last Updated: \today\par
 	\vfill
-
-% Bottom of the page
-	{\large \today\par}
+\scriptsize Current Version: 0.1\par
+\scriptsize Last Updated: \today\par
 \end{titlepage}
+\tableofcontents
+
+\clearpage
+
+\input{Intro}
+\input{Location}
+\input{PartOfSpeech}
+\input{Productivity}
 \end{document}
