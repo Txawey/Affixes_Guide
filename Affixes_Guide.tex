@@ -2,6 +2,8 @@
 \usepackage{fullpage}
 \usepackage{fontspec}
 \usepackage{xcolor}
+\usepackage{indentfirst}
+\usepackage{setspace}
 \usepackage{makeidx}
 \makeindex
 \usepackage[unicode,xetex]{hyperref}
@@ -11,6 +13,13 @@
 
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont{Gentium Basic}
+
+\doublespacing
+%Styling commands for the entries.
+\newcommand{\fix}[1]{\Large \textbf{#1}:\normalsize}
+
+
+
 \begin{document}
 \begin{titlepage}
 	\centering
@@ -31,7 +40,6 @@
 \end{titlepage}
 \tableofcontents
 
-\clearpage
 
 \input{Intro}
 \input{Location}
