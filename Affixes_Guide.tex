@@ -1,10 +1,12 @@
 \documentclass[12pt,a4paper,titlepage, dvipsnames]{book}
+\usepackage{ifthen}
 \usepackage{fullpage}
 \usepackage{fontspec}
 \usepackage{xcolor}
 \usepackage{indentfirst}
 \usepackage{setspace}
 \usepackage{makeidx}
+%\usepackage{amsmath}
 \makeindex
 \usepackage[unicode,xetex]{hyperref}
 \hypersetup{colorlinks=true, linkcolor=Cerulean, urlcolor=Emerald}
@@ -18,7 +20,29 @@
 %Styling commands for the entries.
 \newcommand{\fix}[1]{\Large \textbf{#1}:\normalsize}
 
+\newcommand{\prodfix}[2][p]
+{{ }
+	\ifthenelse{\equal{#1}{p}}
+{\textit{Productive}}{\textit{Unproductive}}
+	{ }
+	\ifthenelse{\equal{#2}{p}}{\textit{Prefix}}{}
+	\ifthenelse{\equal{#2}{s}}{\textit{Suffix}}{}
+	\ifthenelse{\equal{#2}{i}}{\textit{Infix}}{}
+}
 
+\newcommand{\partofs}[1]{{ }[#1]}
+
+\newcommand{\means}[1]{{ }#1}
+
+\newcommand{\example}{\linebreak{\large\textbf{\textit{Examples: }}}}
+
+\newcommand{\worddef}[2]{\textcolor{Blue}{#1}{ }\textit{#2}}
+
+\newcommand{\fixattach}[1]{\textcolor{Red}{#1}}
+
+\renewcommand{\emph}[1]{\underline{#1}}
+
+\newcommand{\source}[2]{{\large { }Source: }\hyperlink{#1}{#2}}
 
 \begin{document}
 \begin{titlepage}
@@ -45,4 +69,5 @@
 \input{Location}
 \input{PartOfSpeech}
 \input{Productivity}
+\printindex
 \end{document}
