@@ -6,7 +6,8 @@
 \usepackage{indentfirst}
 \usepackage{setspace}
 \usepackage{makeidx}
-%\usepackage{amsmath}
+\usepackage{amsmath}
+\usepackage{longtable}
 \makeindex
 \usepackage[unicode,xetex]{hyperref}
 \hypersetup{colorlinks=true, linkcolor=Cerulean, urlcolor=Emerald}
@@ -23,7 +24,8 @@
 \newcommand{\prodfix}[2][p]
 {{ }
 	\ifthenelse{\equal{#1}{p}}
-{\textit{Productive}}{\textit{Unproductive}}
+{\textit{Productive}}
+{\textit{Non-Productive}}
 	{ }
 	\ifthenelse{\equal{#2}{p}}{\textit{Prefix}}{}
 	\ifthenelse{\equal{#2}{s}}{\textit{Suffix}}{}
@@ -59,15 +61,14 @@
 
 	\vspace{2cm}
 	\vfill
-\scriptsize Current Version: 0.11\par
+\scriptsize Current Version: 0.3\par
 \scriptsize Last Updated: \today\par
 \end{titlepage}
 \tableofcontents
 
 
 \input{Intro}
+\input{TableOfAffixes}
 \input{Location}
-\input{PartOfSpeech}
-\input{Productivity}
 \printindex
 \end{document}

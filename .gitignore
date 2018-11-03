@@ -1,5 +1,9 @@
-*
+*.toc
+*.aux
+*.idx
+*.log
+*.out
+*.synctex.gz
 !*.tex
 !.git*
-/Prefixes/*
-!/Prefixes/*
+!/Prefixes/**/
